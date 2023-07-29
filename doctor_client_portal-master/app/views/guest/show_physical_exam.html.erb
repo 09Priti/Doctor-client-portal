@@ -1,0 +1,34 @@
+
+
+
+<div class ="patient">
+
+
+
+
+
+
+<h1>Physical Exam</h1>
+  <ul>
+    <li>Pulse: <%= @physical_exams.pulse%> per minute.</li>
+    <li>Blood Pressure: <%= @physical_exams.systolic_pressure%> x <%= @physical_exams.diastolic_pressure%> mmHg.</li>
+    <li>Height: <%= @physical_exams.height%>.</li>
+    <li>Weight: <%= @physical_exams.weight%> lbs.</li>
+
+  </ul>
+
+</br></br>
+
+
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Medical Notes", show_note_path%></button>
+</br>
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Back", show_medical_path%></button>
+</br>
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Menu", welcome_index_path %></button>
+</br>
+
+
+</div>

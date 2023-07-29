@@ -1,0 +1,25 @@
+<div class ="patient">
+<h1 id = "welcome_h1">Welcome,</h1>
+</br>
+
+<ul id="patient_info">
+    <% @patient_infos.each do |patient_info| %>
+        <a href="/guest/<%= patient_info.user_id %>/show_patient_info" >
+        <li>
+            <strong> <%= patient_info.name%></strong>
+        </li>
+</a>
+
+    <% end %>
+</ul>
+
+
+</br><button type="button" class="btn btn-default">
+<%= link_to "Edit Account", edit_user_registration_path %>
+</button>
+</br><button type="button" class="btn btn-default btn-md ">
+<%if current_user.admin?%>
+<%= link_to "Patient List", admin_index_path %>
+<%end%></button>   
+</br>
+</div>
